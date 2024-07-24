@@ -11,4 +11,5 @@ export class ButtonComponent {
 
   @Input() label: string = 'Кнопка';
   @Input() class: string = '';
+  @Input() disabled: boolean = false;
 }

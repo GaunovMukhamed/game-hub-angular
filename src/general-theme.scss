@@ -4,7 +4,7 @@
   --secondary-color: #d63e00;
   --secondary-text: #000000;
 
-  --background-color: #005166;
+  --background-color: #002d39;
 
   --indent-small: 0.5rem;
   --indent-medium: 1rem;
@@ -56,4 +56,11 @@
 
 .rounded {
   border-radius: var(--border-radius);
+}
+
+.disabled {
+  opacity: 0.7;
+  user-select: none;
+  pointer-events: none;
+  
 }

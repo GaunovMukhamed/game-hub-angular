@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, FormsModule, Validators } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { InputComponent } from '../ui/input/input.component';
 import { ButtonComponent } from "../ui/button/button.component";
 
@@ -8,6 +8,7 @@ import { ButtonComponent } from "../ui/button/button.component";
   standalone: true,
   imports: [
     FormsModule,
+    ReactiveFormsModule,
     InputComponent,
     ButtonComponent
 ],
@@ -16,9 +17,11 @@ import { ButtonComponent } from "../ui/button/button.component";
 })
 export class AuthComponent {
 
-  myForm : FormGroup = new FormGroup({
+  authForm : FormGroup = new FormGroup({
     "login": new FormControl('', [Validators.required, Validators.maxLength(1)]),
   });
 
-
+  onSubmit(): void {
+    console.log(this.authForm.value);
+  }
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { InputComponent } from '../ui/input/input.component';
-import { ButtonComponent } from "../ui/button/button.component";
+import { InputComponent } from '../../ui/input/input.component';
+import { ButtonComponent } from "../../ui/button/button.component";
 
 @Component({
   selector: 'app-auth',

@@ -18,7 +18,7 @@ import { ButtonComponent } from "../ui/button/button.component";
 export class AuthComponent {
 
   authForm : FormGroup = new FormGroup({
-    "login": new FormControl('', [Validators.required, Validators.maxLength(1)]),
+    "login": new FormControl('', [Validators.required, Validators.minLength(1)]),
   });
 
   onSubmit(): void {

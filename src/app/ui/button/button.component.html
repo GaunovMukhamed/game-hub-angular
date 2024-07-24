@@ -1,1 +1,4 @@
-<button [class]="'button pointer rounded '+class">{{label}}</button>
+<button
+  [class]="'button pointer rounded '+class"
+  [ngClass]="{ 'disabled': disabled }">
+  {{label}}</button>

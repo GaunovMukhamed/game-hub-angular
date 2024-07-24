@@ -4,4 +4,11 @@
   outline: none;
   border: none;
   padding: var(--indent-small);
+  transition: background-color 0.3s;
+  transition: color 0.3s;
+
+  &:hover {
+    background-color: var(--secondary-color) !important;
+    color: var(--secondary-text) !important;
+  }
 }

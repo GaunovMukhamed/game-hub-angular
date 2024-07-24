@@ -9,6 +9,8 @@
   --indent-small: 0.5rem;
   --indent-medium: 1rem;
   --indent-large: 1.5rem; 
+
+  --border-radius: 5px;
 }
 
 .page {
@@ -50,4 +52,8 @@
 
 .pointer {
   cursor: pointer;
+}
+
+.rounded {
+  border-radius: var(--border-radius);
 }

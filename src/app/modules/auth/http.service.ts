@@ -16,7 +16,6 @@ export class HttpService {
   private backUrl: string = environment.BACK_URL;
 
   auth(login: string): Observable<SuccessResponse> {
-    console.log(this.backUrl)
     return this._httpClient.post<SuccessResponse>(this.backUrl+'/auth', { login });
   }
 }

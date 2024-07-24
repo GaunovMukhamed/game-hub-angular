@@ -28,7 +28,6 @@ export class AuthComponent {
   });
 
   onSubmit(): void {
-    console.log('asd')
     this._authService.auth(this.authForm.value.login).subscribe((result: SuccessResponse) => {
       console.log(result);
     })

@@ -6,11 +6,12 @@ import { MessageService } from 'primeng/api';
 
 export const errorInterceptor: HttpInterceptorFn = (req, next) => {
 
-  const toastService: MessageService = inject(MessageService);
+  const messageService: MessageService = inject(MessageService);
 
   return next(req).pipe(
     catchError((result: ErrorResponse) => {
-      toastService.add({ severity: 'error', summary: 'Ошибка', detail: result.message });
+      //@ts-ignore
+      messageService.add({ severity: 'error', detail: result.message['message']??result.message });
       return throwError(() => new Error(result.message));
     })
   );

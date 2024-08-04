@@ -31,7 +31,7 @@ export class AuthComponent {
 
   onSubmit(): void {
     this._authService.auth(this.authForm.value.login).subscribe((result: SuccessResponse) => {
-      this._messageService.add({ severity: 'success', summary: 'Успешно', detail: result.message });
+      this._messageService.add({ severity: 'success', detail: result.message });
     })
   }
 }

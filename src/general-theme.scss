@@ -13,9 +13,20 @@
   --border-radius: 5px;
 }
 
+//primeng
 .p-button {
   width: 100%;
 }
+.p-toast .p-toast-message .p-toast-message-content {
+  padding: 0.5rem;
+}
+.p-toast-summary {
+  display: none;
+}
+.p-toast .p-toast-message .p-toast-message-content .p-toast-message-text {
+  margin-left: 0.5rem;
+}
+///
 
 .page {
   background-color: var(--background-color);

@@ -1,6 +1,6 @@
 <div class="page content-center">
   <form [formGroup]="authForm" class="column marged-children" (ngSubmit)="onSubmit()">
-    <app-input placeholder="Логин..." formControlName="login" />
-    <app-button [disabled]="authForm.invalid" class="w-full" />
+    <input pInputText placeholder="Логин..." formControlName="login" />
+    <p-button label="Войти" [type]="'submit'" [disabled]="authForm.invalid" class="w-full" />
   </form>
 </div>

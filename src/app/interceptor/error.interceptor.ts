@@ -1,16 +1,16 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 import { catchError, throwError } from 'rxjs';
 import { ErrorResponse } from '../general.interfaces';
-import { ToastService } from '../ui/toast/toast.service';
 import { inject } from '@angular/core';
+import { MessageService } from 'primeng/api';
 
 export const errorInterceptor: HttpInterceptorFn = (req, next) => {
 
-  const toastService: ToastService = inject(ToastService);
+  const toastService: MessageService = inject(MessageService);
 
   return next(req).pipe(
     catchError((result: ErrorResponse) => {
-      toastService.showMessage({ type: 'error', text: result.message });
+      toastService.add({ severity: 'error', summary: 'Ошибка', detail: result.message });
       return throwError(() => new Error(result.message));
     })
   );

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SuccessResponse } from '../../general.interfaces';
-import { HttpService } from './http.service';
+import { AuthHttpService } from './auth-http.service';
 import { catchError, EMPTY, map, Observable } from 'rxjs';
 
 @Injectable({
@@ -9,7 +9,7 @@ import { catchError, EMPTY, map, Observable } from 'rxjs';
 export class AuthService {
 
   constructor(
-    private _httpService: HttpService
+    private _httpService: AuthHttpService
   ) { }
 
   auth(login: string): Observable<SuccessResponse> {

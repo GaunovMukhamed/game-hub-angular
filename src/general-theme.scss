@@ -49,10 +49,12 @@
   flex-direction: column;
 }
 
-.marged-children {
-  & > :not(:last-child) {
-    margin-bottom: var(--indent-small);
-  }
+.gap-1 {
+  gap: 0.5rem;
+}
+
+.gap-2 {
+  gap: 1rem;
 }
 
 .pointer {

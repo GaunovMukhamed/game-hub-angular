@@ -1,0 +1,9 @@
+<div class="toast-container">
+  @for (msg of messages; track $index) {
+    <div
+      [class]="'row padded toast '+msg.type">
+      <div class="toast-icon">&#33;</div>
+      <div class="flex-1">{{msg.text}}</div>
+    </div>
+  }
+</div>

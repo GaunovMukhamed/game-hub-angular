@@ -1,3 +1,3 @@
 export const environment = {
-  BACK_URL: 'http://192.168.1.36:5001'
+  BACK_URL: 'http://192.168.1.34:5001'
 };
